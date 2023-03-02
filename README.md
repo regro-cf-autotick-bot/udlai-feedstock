@@ -1,11 +1,11 @@
-About udlai
-===========
+About udlai-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/udlai-feedstock/blob/main/LICENSE.txt)
 
 Home: http://udlai.readthedocs.org
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/udlai-feedstock/blob/main/LICENSE.txt)
 
 Summary: UDL.AI Python interface
 
