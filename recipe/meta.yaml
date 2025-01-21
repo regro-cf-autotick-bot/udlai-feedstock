@@ -6,24 +6,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 38d33cb02a9de832d5acb657a7095997d5594bdc55c91b2cd2f885294a32899e
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3
+    - python >={{ python_min }}
     - pandas
     - requests
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - udlai
 
